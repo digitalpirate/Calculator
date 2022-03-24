@@ -36,7 +36,6 @@ namespace Calculator
                             break;
                         default:
                             break;
-
                     }
                 }
                 else
@@ -55,7 +54,7 @@ namespace Calculator
             Console.WriteLine("Second number: ");
             input2 = ConvertToDouble(Console.ReadLine());
             result = input1 + input2;
-            Console.WriteLine($"{input1.ToString()} plus {input2.ToString()} equals{result.ToString()}");
+            Console.WriteLine($"{input1.ToString()} plus {input2.ToString()} equals {result.ToString()}");
             Console.WriteLine("Press enter to continue.");
             Console.ReadLine();
         }
@@ -68,7 +67,7 @@ namespace Calculator
             Console.WriteLine("Second number: ");
             input2 = ConvertToDouble(Console.ReadLine());
             result = input1 - input2;
-            Console.WriteLine($"{input1.ToString()} minus {input2.ToString()} equals{result.ToString()}");
+            Console.WriteLine($"{input1.ToString()} minus {input2.ToString()} equals {result.ToString()}");
             Console.WriteLine("Press enter to continue.");
             Console.ReadLine();
         }
@@ -81,7 +80,7 @@ namespace Calculator
             Console.WriteLine("Second number: ");
             input2 = ConvertToDouble(Console.ReadLine());
             result = input1 * input2;
-            Console.WriteLine($"{input1.ToString()} Multiplied by {input2.ToString()} equals{result.ToString()}");
+            Console.WriteLine($"{input1.ToString()} Multiplied by {input2.ToString()} equals {result.ToString()}");
             Console.WriteLine("Press enter to continue.");
             Console.ReadLine();
         }
@@ -101,7 +100,7 @@ namespace Calculator
             else
             {
                 result = input1 / input2;
-                Console.WriteLine($"{input1.ToString()} divided by {input2.ToString()} equals{result.ToString()}");
+                Console.WriteLine($"{input1.ToString()} divided by {input2.ToString()} equals {result.ToString()}");
                 Console.WriteLine("Press enter to continue.");
                 Console.ReadLine();
             }
