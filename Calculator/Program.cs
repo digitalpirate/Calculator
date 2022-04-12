@@ -2,15 +2,25 @@
 
 namespace Calculator
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             string choice;
+            double input1, input2;
             bool run = true;
             
             do
             {
+                Console.Clear();
+                
+                Console.WriteLine("First number: ");
+                input1 = ConvertToDouble(Console.ReadLine());
+                Console.WriteLine("Second number: ");
+                input2 = ConvertToDouble(Console.ReadLine());
+                Console.WriteLine("Press enter to continue.");
+                Console.ReadLine();
+
                 Console.Clear();
                 Console.WriteLine("Let's Calculate!");
                 Console.WriteLine("1.Add\n2.Subtract\n3.Multiply\n4.Divide\n0.Quit");
@@ -23,16 +33,16 @@ namespace Calculator
                             run = false;
                             break;
                         case "1":
-                            Add();
+                            Add(input1, input2);
                             break;
                         case "2":
-                            Subtract();
+                            Subtract(input1, input2);
                             break;
                         case "3":
-                            Multiply();
+                            Multiply(input1, input2);
                             break;
                         case "4":
-                            Divide();
+                            Divide(input1, input2);
                             break;
                         default:
                             break;
@@ -45,53 +55,62 @@ namespace Calculator
                 }
             }while( run==true );   
         }
-        public static void Add()
+        public static void Add(double input1, double input2 )
         {
             Console.Clear();
-            double input1, input2, result;
-            Console.WriteLine("First number: ");
-            input1 = ConvertToDouble(Console.ReadLine());
-            Console.WriteLine("Second number: ");
-            input2 = ConvertToDouble(Console.ReadLine());
+            double result;
             result = input1 + input2;
+
             Console.WriteLine($"{input1.ToString()} plus {input2.ToString()} equals {result.ToString()}");
             Console.WriteLine("Press enter to continue.");
             Console.ReadLine();
         }
-        public static void Subtract()
+        public static void Add(double[] input1, double[] input2)
+        {
+
+            Console.Clear();
+            
+
+            //result[1] = input1[1] + input2[1];
+
+           // Console.WriteLine($"{input1.ToString()} plus {input2.ToString()} equals {result.ToString()}");
+            Console.WriteLine("Press enter to continue.");
+            Console.ReadLine();
+
+        }
+        public static void Subtract(double input1,double input2)
         {
             Console.Clear();
-            double input1, input2, result;
-            Console.WriteLine("First number: ");
-            input1 = ConvertToDouble(Console.ReadLine());
-            Console.WriteLine("Second number: ");
-            input2 = ConvertToDouble(Console.ReadLine());
+            double result;
             result = input1 - input2;
             Console.WriteLine($"{input1.ToString()} minus {input2.ToString()} equals {result.ToString()}");
             Console.WriteLine("Press enter to continue.");
             Console.ReadLine();
         }
-        public static void Multiply()
+        public static void Subtract(double[] input1, double[] input2)
         {
             Console.Clear();
-            double input1, input2, result;
-            Console.WriteLine("First number: ");
-            input1 = ConvertToDouble(Console.ReadLine());
-            Console.WriteLine("Second number: ");
-            input2 = ConvertToDouble(Console.ReadLine());
+            double result;
+            result = input1[1] - input2[1];
+            Console.WriteLine($"{input1.ToString()} minus {input2.ToString()} equals {result.ToString()}");
+            Console.WriteLine("Press enter to continue.");
+            Console.ReadLine();
+        }
+        public static void Multiply(double input1, double input2)
+        {
+            Console.Clear();
+            double result;
+           
             result = input1 * input2;
             Console.WriteLine($"{input1.ToString()} Multiplied by {input2.ToString()} equals {result.ToString()}");
             Console.WriteLine("Press enter to continue.");
             Console.ReadLine();
         }
-        public static void Divide()
+        public static void Divide(double input1, double input2)
         {
             Console.Clear();
-            double input1, input2, result;
-            Console.WriteLine("First number: ");
-            input1 = ConvertToDouble(Console.ReadLine());
-            Console.WriteLine("Second number: ");
-            input2 = ConvertToDouble(Console.ReadLine());
+            double result;
+            
             if (input2 == 0)
             {
                 Console.WriteLine("Cannot divide by 0.\nPress enter to continue.");
