@@ -19,10 +19,10 @@ namespace TestProject
 
             double testResult = 50 + 10;
             Add(input1, input2);
-            
+
             //Assert
 
-            Assert.Equal(testResult, Add.result);
+            Assert.Equal(testResult, Add.result, 1);
 
         }
     }

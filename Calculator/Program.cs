@@ -60,7 +60,6 @@ namespace Calculator
             Console.Clear();
             double result;
             result = input1 + input2;
-
             Console.WriteLine($"{input1.ToString()} plus {input2.ToString()} equals {result.ToString()}");
             Console.WriteLine("Press enter to continue.");
             Console.ReadLine();
@@ -69,11 +68,12 @@ namespace Calculator
         {
 
             Console.Clear();
-            
+            double[] result= new double[input1.Length];
 
             //result[1] = input1[1] + input2[1];
-
-           // Console.WriteLine($"{input1.ToString()} plus {input2.ToString()} equals {result.ToString()}");
+            foreach (int x in input1)
+                result[x] = input1[x] + input2[x];
+            // Console.WriteLine($"{input1.ToString()} plus {input2.ToString()} equals {result.ToString()}");
             Console.WriteLine("Press enter to continue.");
             Console.ReadLine();
 
@@ -90,9 +90,12 @@ namespace Calculator
         public static void Subtract(double[] input1, double[] input2)
         {
             Console.Clear();
-            double result;
-            result = input1[1] - input2[1];
-            Console.WriteLine($"{input1.ToString()} minus {input2.ToString()} equals {result.ToString()}");
+            double[] result = new double[input1.Length];
+
+            //result[1] = input1[1] + input2[1];
+            foreach (int x in input1)
+                result[x] = input1[x] - input2[x];
+            // Console.WriteLine($"{input1.ToString()} plus {input2.ToString()} equals {result.ToString()}");
             Console.WriteLine("Press enter to continue.");
             Console.ReadLine();
         }
