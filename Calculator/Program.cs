@@ -55,7 +55,7 @@ namespace Calculator
                 }
             }while( run==true );   
         }
-        public static void Add(double input1, double input2 )
+        public static double Add(double input1, double input2 )
         {
             Console.Clear();
             double result;
@@ -63,6 +63,7 @@ namespace Calculator
             Console.WriteLine($"{input1.ToString()} plus {input2.ToString()} equals {result.ToString()}");
             Console.WriteLine("Press enter to continue.");
             Console.ReadLine();
+            return input1 + input2;
         }
         public static void Add(double[] input1, double[] input2)
         {

@@ -1,7 +1,6 @@
 using System;
 using Xunit;
-using Calculator;
-
+using static Calculator.Program;
 namespace TestProject
 {
     public class UnitTest1
@@ -9,20 +8,15 @@ namespace TestProject
         [Fact]
         public void Test1()
         {
-            //Arrange
             
-
-            string input1 = "50";
-            string input2 = "10";
-
-            //Act
-
+            
+            double x = 50;
+            double y = 10;
             double testResult = 50 + 10;
-            Add(input1, input2);
 
-            //Assert
 
-            Assert.Equal(testResult, Add.result, 1);
+            Calculator.Program.Add(x, y).Equals(testResult);
+
 
         }
     }
