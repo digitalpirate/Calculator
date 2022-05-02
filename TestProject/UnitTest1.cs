@@ -8,15 +8,16 @@ namespace TestProject
         [Fact]
         public void Test1()
         {
-            
-            
-            double x = 50;
-            double y = 10;
-            double testResult = 50 + 10;
+            //Arrange
+            double expected = 50;
 
 
-            Calculator.Program.Add(x, y).Equals(testResult);
+            //Act
+            double actual = Calculator.Program.Add(10, 40);
 
+            //Assert
+
+            Assert.Equal(expected, actual);
 
         }
     }

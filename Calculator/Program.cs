@@ -57,12 +57,12 @@ namespace Calculator
         }
         public static double Add(double input1, double input2 )
         {
-            Console.Clear();
+            //Console.Clear();
             double result;
-            result = input1 + input2;
-            Console.WriteLine($"{input1.ToString()} plus {input2.ToString()} equals {result.ToString()}");
-            Console.WriteLine("Press enter to continue.");
-            Console.ReadLine();
+            //result = input1 + input2;
+            //Console.WriteLine($"{input1.ToString()} plus {input2.ToString()} equals {result.ToString()}");
+            //Console.WriteLine("Press enter to continue.");
+            //Console.ReadLine();
             return input1 + input2;
         }
         public static void Add(double[] input1, double[] input2)
@@ -79,7 +79,7 @@ namespace Calculator
             Console.ReadLine();
 
         }
-        public static void Subtract(double input1,double input2)
+        public static double Subtract(double input1,double input2)
         {
             Console.Clear();
             double result;
@@ -87,8 +87,9 @@ namespace Calculator
             Console.WriteLine($"{input1.ToString()} minus {input2.ToString()} equals {result.ToString()}");
             Console.WriteLine("Press enter to continue.");
             Console.ReadLine();
+            return input1 - input2;
         }
-        public static void Subtract(double[] input1, double[] input2)
+        public static double[] Subtract(double[] input1, double[] input2)
         {
             Console.Clear();
             double[] result = new double[input1.Length];
@@ -99,8 +100,9 @@ namespace Calculator
             // Console.WriteLine($"{input1.ToString()} plus {input2.ToString()} equals {result.ToString()}");
             Console.WriteLine("Press enter to continue.");
             Console.ReadLine();
+            return result;
         }
-        public static void Multiply(double input1, double input2)
+        public static double Multiply(double input1, double input2)
         {
             Console.Clear();
             double result;
@@ -109,8 +111,9 @@ namespace Calculator
             Console.WriteLine($"{input1.ToString()} Multiplied by {input2.ToString()} equals {result.ToString()}");
             Console.WriteLine("Press enter to continue.");
             Console.ReadLine();
+            return input1* input2;
         }
-        public static void Divide(double input1, double input2)
+        public static double Divide(double input1, double input2)
         {
             Console.Clear();
             double result;
@@ -119,6 +122,7 @@ namespace Calculator
             {
                 Console.WriteLine("Cannot divide by 0.\nPress enter to continue.");
                 Console.ReadLine();
+                return 0;
             }
             else
             {
@@ -126,6 +130,7 @@ namespace Calculator
                 Console.WriteLine($"{input1.ToString()} divided by {input2.ToString()} equals {result.ToString()}");
                 Console.WriteLine("Press enter to continue.");
                 Console.ReadLine();
+                return input1 / input2;
             }
         }
         public static double ConvertToDouble(string input)
